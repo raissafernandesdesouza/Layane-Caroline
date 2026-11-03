@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f3ed">
+  <meta name="description" content="Realce sua beleza com cuidado e delicadeza. Agende seu horário com Layane Caroline Sobrancelhas em Campo Belo, MG.">
+  <title>Layane Caroline | Beleza com a sua essência</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #292521;
+      --muted: #716962;
+      --paper: #f8f3ed;
+      --white: #fffdfa;
+      --rose: #a95758;
+      --rose-dark: #854243;
+      --peach: #e8c6b6;
+      --sage: #788172;
+      --line: #e8ddd3;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font: inherit; }
+    .shell { max-width: 1240px; margin: 0 auto; padding: 0 42px; }
+    .topbar { height: 82px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-mark { width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid var(--rose); border-radius: 50%; color: var(--rose); font: italic 22px var(--serif); }
+    .brand-name { font: 600 18px var(--serif); line-height: 1.1; }
+    .brand-sub { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; letter-spacing: 1.8px; text-transform: uppercase; }
+    .nav { display: flex; align-items: center; gap: 34px; font-size: 13px; }
+    .nav a:not(.nav-cta) { color: #514a44; }
+    .nav a:not(.nav-cta):hover { color: var(--rose); }
+    .nav-cta, .button-primary { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; gap: 9px; padding: 0 21px; border: 0; border-radius: 2px; background: var(--rose); color: white; font-size: 12px; font-weight: 700; transition: background .2s, transform .2s; cursor: pointer; }
+    .nav-cta:hover, .button-primary:hover { background: var(--rose-dark); transform: translateY(-2px); }
+    .hero { display: grid; grid-template-columns: 1fr 1.03fr; min-height: 610px; align-items: center; gap: 70px; padding-top: 44px; padding-bottom: 55px; }
+    .hero-copy { padding: 18px 0 24px 12px; animation: rise .75s both; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; color: var(--rose); font-size: 10px; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; }
+    .eyebrow::before { width: 26px; height: 1px; background: var(--rose); content: ''; }
+    h1 { max-width: 560px; margin: 22px 0 19px; font: 500 clamp(44px, 5vw, 68px)/1.07 var(--serif); letter-spacing: 0; }
+    h1 em { color: var(--rose); font-weight: 500; }
+    .hero-text { max-width: 430px; margin: 0 0 29px; color: var(--muted); font-size: 15px; line-height: 1.8; }
+    .hero-actions { display: flex; align-items: center; gap: 21px; }
+    .text-link { padding: 9px 0; color: var(--ink); font-size: 12px; font-weight: 600; border-bottom: 1px solid var(--ink); }
+    .rating { display: flex; align-items: center; gap: 12px; margin-top: 43px; }
+    .stars { color: #bc8654; letter-spacing: 2px; font-size: 14px; }
+    .rating-copy { color: var(--muted); font-size: 11px; }
+    .rating-copy strong { color: var(--ink); font-size: 13px; }
+    .hero-visual { position: relative; min-width: 0; height: 505px; padding: 0 20px 20px 0; animation: rise .85s .1s both; }
+    .photo-frame { position: relative; height: 100%; overflow: hidden; background: #d7c6ba; }
+    .photo-frame::after { position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(33, 24, 21, .5)); content: ''; }
+    .hero-photo { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 42%; }
+    .photo-caption { position: absolute; z-index: 1; bottom: 24px; left: 25px; color: white; font: italic 17px var(--serif); }
+    .frame-outline { position: absolute; z-index: -1; top: 20px; right: 0; bottom: 0; left: 20px; border: 1px solid var(--peach); }
+    .photo-badge { position: absolute; z-index: 2; top: 28px; left: -24px; width: 92px; height: 92px; display: grid; place-content: center; border-radius: 50%; background: var(--sage); color: white; text-align: center; transform: rotate(-9deg); }
+    .photo-badge strong { font: 600 25px var(--serif); }
+    .photo-badge span { margin-top: 1px; font-size: 8px; letter-spacing: 1px; text-transform: uppercase; }
+    .strip { background: var(--rose); color: white; }
+    .strip-inner { min-height: 96px; display: grid; grid-template-columns: repeat(3, 1fr); align-items: center; }
+    .strip-item { display: flex; align-items: center; justify-content: center; gap: 13px; padding: 10px 18px; border-right: 1px solid rgba(255,255,255,.28); }
+    .strip-item:last-child { border: 0; }
+    .strip-icon { font: 21px var(--serif); opacity: .9; }
+    .strip-item strong { display: block; font: 500 16px var(--serif); }
+    .strip-item span:last-child { display: block; margin-top: 3px; color: rgba(255,255,255,.82); font-size: 10px; }
+    .section { padding: 100px 0; }
+    .section-heading { max-width: 610px; margin: 0 auto 49px; text-align: center; }
+    .section-heading .eyebrow { justify-content: center; }
+    h2 { margin: 14px 0; font: 500 42px/1.15 var(--serif); }
+    .section-heading p { max-width: 490px; margin: 0 auto; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .service { min-height: 216px; padding: 31px 30px 28px; border-right: 1px solid var(--line); }
+    .service:first-child { border-left: 1px solid var(--line); }
+    .service-number { color: var(--rose); font: italic 15px var(--serif); }
+    .service h3 { margin: 21px 0 9px; font: 500 22px var(--serif); }
+    .service p { max-width: 260px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .experience { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 80px; background: #eee6de; }
+    .experience .shell { display: contents; }
+    .experience-inner { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 80px; max-width: 1240px; padding: 0 42px; margin: 0 auto; }
+    .experience-photo { height: 400px; overflow: hidden; background: #d4c6bc; }
+    .experience-photo img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 40%; }
+    .experience-copy .eyebrow { margin-bottom: 19px; }
+    .experience-copy h2 { max-width: 430px; margin: 0 0 16px; }
+    .experience-copy p { max-width: 440px; margin: 0 0 21px; color: var(--muted); font-size: 13px; line-height: 1.85; }
+    .review { margin: 0; padding: 0; border: 0; color: var(--rose); font: 16px var(--serif); }
+    .review p { color: var(--ink); font: italic 19px/1.65 var(--serif); }
+    .review cite { color: var(--muted); font: 11px var(--sans); }
+    .booking { background: var(--white); }
+    .booking-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 74px; align-items: start; }
+    .booking-intro h2 { margin-top: 15px; }
+    .booking-intro p { color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .contact-line { display: flex; align-items: start; gap: 12px; margin-top: 25px; color: var(--ink); font-size: 12px; line-height: 1.7; }
+    .contact-line b { display: block; font-weight: 700; }
+    .contact-icon { color: var(--rose); font-size: 17px; }
+    .booking-form { display: grid; grid-template-columns: 1fr 1fr; gap: 17px 18px; padding-top: 6px; }
+    .field { display: flex; flex-direction: column; gap: 8px; }
+    .field.full { grid-column: 1 / -1; }
+    label { color: #544d46; font-size: 11px; font-weight: 700; }
+    input, select { width: 100%; height: 46px; padding: 0 12px; border: 1px solid var(--line); border-radius: 1px; outline: none; background: white; color: var(--ink); font-size: 12px; }
+    input:focus, select:focus { border-color: var(--rose); box-shadow: 0 0 0 2px rgba(169,87,88,.1); }
+    .booking-form .button-primary { justify-self: start; grid-column: 1 / -1; margin-top: 3px; }
+    .form-note { grid-column: 1 / -1; margin: -7px 0 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+    footer { padding: 27px 0; background: #342d29; color: white; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .footer-name { font: 500 17px var(--serif); }
+    .footer-meta { color: rgba(255,255,255,.7); font-size: 10px; }
+    .footer-link { color: white; font-size: 11px; border-bottom: 1px solid rgba(255,255,255,.6); padding: 7px 0; }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 850px) {
+      .shell { padding: 0 25px; }
+      .hero { gap: 35px; min-height: auto; }
+      .hero-visual { height: 430px; }
+      .experience-inner { gap: 42px; padding: 0 25px; }
+      .booking-layout { gap: 40px; }
+    }
+    @media (max-width: 650px) {
+      .shell { padding: 0 20px; }
+      .topbar { height: 70px; }
+      .brand-mark { width: 36px; height: 36px; }
+      .brand-name { font-size: 16px; }
+      .nav { gap: 0; }
+      .nav a:not(.nav-cta) { display: none; }
+      .nav-cta { min-height: 40px; padding: 0 13px; font-size: 11px; }
+      .hero { grid-template-columns: 1fr; gap: 18px; padding-top: 49px; padding-bottom: 36px; }
+      .hero-copy { padding: 0; }
+      h1 { max-width: 440px; font-size: 49px; }
+      .hero-text { font-size: 13px; }
+      .rating { margin-top: 25px; }
+      .hero-visual { height: 390px; margin: 0 5px 0 18px; }
+      .photo-badge { left: -19px; width: 78px; height: 78px; }
+      .photo-badge strong { font-size: 22px; }
+      .strip-inner { grid-template-columns: 1fr; padding: 9px 0; }
+      .strip-item { min-height: 63px; justify-content: flex-start; padding-left: 18px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.24); }
+      .strip-item:last-child { border-bottom: 0; }
+      .section { padding: 72px 0; }
+      .section-heading { margin-bottom: 32px; }
+      h2 { font-size: 35px; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service, .service:first-child { min-height: 0; padding: 25px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); border-left: 1px solid var(--line); }
+      .service:last-child { border-bottom: 0; }
+      .service h3 { margin: 12px 0 6px; }
+      .experience-inner { grid-template-columns: 1fr; gap: 29px; padding: 0 20px; }
+      .experience-photo { height: 330px; }
+      .experience-copy h2 { font-size: 36px; }
+      .booking-layout { grid-template-columns: 1fr; gap: 28px; }
+      .booking-form { gap: 14px 12px; }
+      .booking-form .button-primary { width: 100%; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell topbar">
+    <a class="brand" href="#inicio" aria-label="Layane Caroline, início">
+      <span class="brand-mark" aria-hidden="true">L</span>
+      <span class="brand-name">Layane Caroline<span class="brand-sub">Sobrancelhas & beleza</span></span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#cuidados">Cuidados</a>
+      <a href="#sobre">Sobre</a>
+      <a class="nav-cta" href="#agendar">Agendar horário <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="shell hero" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow">Seu momento de cuidado</div>
+        <h1>Beleza que respeita <em>a sua essência.</em></h1>
+        <p class="hero-text">Um atendimento feito com carinho, escuta e atenção aos detalhes. Para você se sentir ainda mais bonita, do seu jeito.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="#agendar">Quero agendar <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#cuidados">Conheça os cuidados</a>
+        </div>
+        <div class="rating" aria-label="Nota 5 de 5, com 5 avaliações">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span class="rating-copy"><strong>5,0</strong> · 5 avaliações no Google</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="photo-frame">
+          <img class="hero-photo" src="https://lh3.googleusercontent.com/grass-cs/AABkmLfmd25KkDi8W5lbWJbBy9JFpZ16nuApsYnN73hQFfmzFGxVzaYsCzdVvXsCL3G992MUHu9sPJlO_dx2J7-xjBqkOoh0Zq1oXN00Clg54YFfmww157fPDUZZcc636izRq58gqWRgs42vl63v=w1000-h1500-k-no" alt="Foto publicada no perfil de Layane Caroline Sobrancelhas no Google Maps" fetchpriority="high">
+          <div class="photo-caption">Um cuidado só seu</div>
+        </div>
+        <div class="frame-outline" aria-hidden="true"></div>
+        <div class="photo-badge"><strong>5,0</strong><span>no Google</span></div>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="Diferenciais">
+      <div class="shell strip-inner">
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">✳</span><span><strong>Atendimento acolhedor</strong><span>Respeito ao seu estilo e às suas escolhas</span></span></div>
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">♡</span><span><strong>Um espaço para todas</strong><span>Ambiente inclusivo e banheiro neutro</span></span></div>
+        <div class="strip-item"><span class="strip-icon" aria-hidden="true">⌂</span><span><strong>Em Campo Belo, MG</strong><span>Rua Antônio Lourenço de Almeida, 330</span></span></div>
+      </div>
+    </section>
+
+    <section class="section shell" id="cuidados">
+      <div class="section-heading">
+        <div class="eyebrow">Beleza com intenção</div>
+        <h2>Cuidado que combina com você</h2>
+        <p>Cada detalhe começa com uma boa conversa. Conte o que você gosta e vamos encontrar juntas o cuidado ideal.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service"><span class="service-number">01 / Sobrancelhas</span><h3>Design com delicadeza</h3><p>Um olhar atento ao formato do seu rosto e ao resultado que você deseja.</p></article>
+        <article class="service"><span class="service-number">02 / Beleza</span><h3>Realce natural</h3><p>Cuidados pensados para valorizar a sua beleza sem deixar de ser você.</p></article>
+        <article class="service"><span class="service-number">03 / Experiência</span><h3>Tempo para você</h3><p>Atendimento atencioso, pontual e feito para você aproveitar o momento.</p></article>
+      </div>
+    </section>
+
+    <section class="section experience" id="sobre">
+      <div class="experience-inner">
+        <div class="experience-photo"><img src="https://lh3.googleusercontent.com/grass-cs/AABkmLfmd25KkDi8W5lbWJbBy9JFpZ16nuApsYnN73hQFfmzFGxVzaYsCzdVvXsCL3G992MUHu9sPJlO_dx2J7-xjBqkOoh0Zq1oXN00Clg54YFfmww157fPDUZZcc636izRq58gqWRgs42vl63v=w1000-h1500-k-no" alt="Detalhes do perfil de Layane Caroline Sobrancelhas no Google Maps" loading="lazy"></div>
+        <div class="experience-copy">
+          <div class="eyebrow">Mais do que um atendimento</div>
+          <h2>Você chega para cuidar da beleza. Sai se sentindo em casa.</h2>
+          <p>Um espaço de cuidado, conversa boa e respeito ao que faz você se sentir bem. Cada atendimento é feito com zelo e carinho, do começo ao fim.</p>
+          <blockquote class="review"><p>“Trabalho impecável, atendimento excelente, mãos de fada, pontual, atenciosa e muito respeitosa com o desejo do cliente.”</p><cite>Polyana M. · avaliação no Google</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section booking" id="agendar">
+      <div class="shell booking-layout">
+        <div class="booking-intro">
+          <div class="eyebrow">Seu próximo momento</div>
+          <h2>Vamos encontrar um horário para você?</h2>
+          <p>Preencha os dados e a mensagem será aberta no WhatsApp para confirmar seu agendamento diretamente com a Layane.</p>
+          <div class="contact-line"><span class="contact-icon" aria-hidden="true">⌖</span><span><b>Visite o espaço</b>R. Antônio Lourenço de Almeida, 330<br>Monte Belo 2 · Campo Belo, MG</span></div>
+          <div class="contact-line"><span class="contact-icon" aria-hidden="true">◷</span><span><b>Atendimento</b>Consulte disponibilidade pelo WhatsApp</span></div>
+        </div>
+        <form class="booking-form" id="booking-form">
+          <div class="field"><label for="name">Seu nome</label><input id="name" name="name" autocomplete="name" placeholder="Como podemos te chamar?" required></div>
+          <div class="field"><label for="phone">Seu WhatsApp</label><input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="(35) 99999-9999" required></div>
+          <div class="field"><label for="service">Cuidado desejado</label><select id="service" name="service" required><option value="" disabled selected>Escolha uma opção</option><option>Design de sobrancelhas</option><option>Cuidados de beleza</option><option>Quero conversar sobre opções</option></select></div>
+          <div class="field"><label for="date">Melhor dia para você</label><input id="date" name="date" type="date" required></div>
+          <button class="button-primary" type="submit">Continuar pelo WhatsApp <span aria-hidden="true">↗</span></button>
+          <p class="form-note">O envio abre uma conversa no WhatsApp. O horário só fica confirmado após o retorno da profissional.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div><div class="footer-name">Layane Caroline Sobrancelhas</div><div class="footer-meta">Beleza, cuidado e acolhimento · Campo Belo, MG</div></div>
+      <a class="footer-link" href="https://www.google.com/maps/search/?api=1&query=Layane+Caroline+Sobrancelhas+Campo+Belo+MG" target="_blank" rel="noopener noreferrer">Ver localização no mapa ↗</a>
+      <a class="footer-link" href="tel:+5535997684009">(35) 99768-4009</a>
+    </div>
+  </footer>
+  <script>
+    const form = document.querySelector('#booking-form');
+    const dateField = document.querySelector('#date');
+    dateField.min = new Date().toISOString().split('T')[0];
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const values = new FormData(form);
+      const date = new Date(`${values.get('date')}T12:00:00`).toLocaleDateString('pt-BR');
+      const message = [
+        'Olá, Layane! Gostaria de agendar um horário.',
+        `Nome: ${values.get('name')}`,
+        `Meu WhatsApp: ${values.get('phone')}`,
+        `Cuidado: ${values.get('service')}`,
+        `Melhor dia: ${date}`
+      ].join('\n');
+      window.open(`https://wa.me/5535997684009?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>
